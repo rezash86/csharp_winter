@@ -1,0 +1,6 @@
+C:\Users\Reza\source\repos\c#-winter2020\session2-projects\session2-projects\bin\Debug\session2-projects.exe.config
+C:\Users\Reza\source\repos\c#-winter2020\session2-projects\session2-projects\bin\Debug\session2-projects.exe
+C:\Users\Reza\source\repos\c#-winter2020\session2-projects\session2-projects\bin\Debug\session2-projects.pdb
+C:\Users\Reza\source\repos\c#-winter2020\session2-projects\session2-projects\obj\Debug\session2-projects.csprojAssemblyReference.cache
+C:\Users\Reza\source\repos\c#-winter2020\session2-projects\session2-projects\obj\Debug\session2-projects.exe
+C:\Users\Reza\source\repos\c#-winter2020\session2-projects\session2-projects\obj\Debug\session2-projects.pdb
