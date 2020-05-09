@@ -14,9 +14,32 @@ namespace session3_projects
             //Console.WriteLine(ConcatCheck("Batman", "Joker"));
             //Console.WriteLine(ContainStr("Spiderman.marvel", '.'));
             checkStringMethods();
+            //console.read
+            //console.write
+            Console.WriteLine(Task1("wtrtwttt"));
 
 
+        }
 
+        private static bool Task1(string str)
+        {           
+            //bool exists = str.Contains("w"); 
+            int count = 0;
+            for(int i=0; i< str.Length; i++)
+            {
+                if (str[i].Equals('w'))
+                {
+                    count++;
+                }
+            }
+            //if(count > 1 && count < 3){
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+            return count > 1 && count < 3;
         }
 
         public static void checkStringMethods()
