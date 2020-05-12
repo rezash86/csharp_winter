@@ -16,15 +16,8 @@ namespace session5_projects
         {
             InitializeComponent();
             changeAttributes();
-            btnSample.Width = 300;
-            btnSample.Text += " please";
 
-
-            cmboxGender.Items.Remove("man");
-            cmboxGender.Items.Remove("woman");
-
-            cmboxGender.Items.Add("Male");
-            cmboxGender.Items.Add("Female");
+            rbtnGreen.Checked = true;
         }
 
         private void changeAttributes()
@@ -59,6 +52,39 @@ namespace session5_projects
 
             //string values => retreive value from textbox
             string txt = txtboxSample.Text;
+
+
+            btnSample.Width = 300;
+            btnSample.Text += " please";
+
+
+            //removing
+            cmboxGender.Items.Remove("man");
+            cmboxGender.Items.Remove("woman");
+
+            //adding
+            cmboxGender.Items.Add("Male");
+            cmboxGender.Items.Add("Female");
+
+            cmboxGender.SelectedIndex = 1;
+            //take the selectedItem
+            string selected = cmboxGender.Text;
+
+            var item = cmboxGender.
+                GetItemText(cmboxGender.SelectedItem);
+
+            cmboxGender.SelectedIndex = cmboxGender.FindStringExact("Male");
+
+            //checkedListbox
+            checkedListBox1.Items.Add("Sunday", false);
+            checkedListBox1.Items.Add("Monday", CheckState.Checked);
+            checkedListBox1.Items.Add("Tuesday", CheckState.Unchecked);
+            checkedListBox1.Items.Add("Wednesday", CheckState.Indeterminate);
+
+            string[] days = new[] { "Thursday", "Friday" };
+            checkedListBox1.Items.AddRange(days);
+
+            checkedListBox1.SetItemChecked(0, true);
         }
         private void txtboxSample_TextChanged(object sender, EventArgs e)
         {
@@ -136,6 +162,82 @@ namespace session5_projects
             {
                 string message = exc.Message;
                 MessageBox.Show("error in the input " + message);
+            }
+            
+        }
+
+        private void cmboxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmboxGender.SelectedItem.ToString() == "Male")
+            {
+
+            }
+            else if(cmboxGender.SelectedItem.ToString() == "Female")
+            {
+
+            }
+        }
+
+        private void cmboxDate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmboxDate.Items.Clear();
+
+            if (cmboxDate.SelectedItem.ToString() == "Year")
+            {
+                comboBoxDynamic.Items.Add("2020");
+                comboBoxDynamic.Items.Add("2021");
+                comboBoxDynamic.Items.Add("2022");
+
+            }
+
+            if (cmboxDate.SelectedItem.ToString() == "Month")
+            {
+                comboBoxDynamic.Items.Add("Jan");
+                comboBoxDynamic.Items.Add("Feb");
+            }
+
+            if (cmboxDate.SelectedItem.ToString() == "Day")
+            {
+                for(int i=1; i<31; i++)
+                {
+                    comboBoxDynamic.Items.Add(i);
+                }
+            }
+        }
+
+        private void btnCheked_Click(object sender, EventArgs e)
+        {
+            bool isChecked= checkedListBox1.GetItemChecked(0);
+            if (isChecked)
+            {
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemCheckState(i, CheckState.Checked);
+                }
+            }
+            
+        }
+
+        private void btnColor_Click(object sender, EventArgs e)
+        {
+            if(rbtnBlue.Checked == true && rbtnRectangle.Checked)
+            {
+                MessageBox.Show("Blue rectangle was selected");
+            }
+            else if(rbtnGreen.Checked == true)
+            {
+                MessageBox.Show("Green was selected");
+            }
+            else
+            {
+                MessageBox.Show("Red was selected");
             }
             
         }
