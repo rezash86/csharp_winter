@@ -121,14 +121,14 @@
             // 
             this.form1ToolStripMenuItem1.Name = "form1ToolStripMenuItem1";
             this.form1ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.form1ToolStripMenuItem1.Text = "Form1";
+            this.form1ToolStripMenuItem1.Text = "Text functions";
             this.form1ToolStripMenuItem1.Click += new System.EventHandler(this.form1ToolStripMenuItem1_Click);
             // 
             // form2ToolStripMenuItem
             // 
             this.form2ToolStripMenuItem.Name = "form2ToolStripMenuItem";
             this.form2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.form2ToolStripMenuItem.Text = "Form2";
+            this.form2ToolStripMenuItem.Text = "Picture Functions";
             this.form2ToolStripMenuItem.Click += new System.EventHandler(this.form2ToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
@@ -155,7 +155,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Main Form";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
